@@ -1,12 +1,12 @@
-import Banner from "@/components/Banner";
-import Friends from "@/components/Friends";
-
+import React from 'react';
+import FriendsList from '@/components/Friends/FriendsList';
+import Banner from '@/components/Banner';
 
 export default function Home() {
   return (
-    <>
+    <main className="min-h-screen">
       <Banner />
-      <Friends/>
-    </>
+      <FriendsList />
+    </main>
   );
 }

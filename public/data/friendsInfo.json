@@ -3,128 +3,272 @@
     "id": 1,
     "name": "John Doe",
     "picture": "https://randomuser.me/api/portraits/men/1.jpg",
+    "email": "john.doe@gmail.com",
     "active": 12,
-    "status": "Overdue",
-    "tags": ["College", "Home"]
+    "status": "overdue",
+    "tags": ["College", "Home"],
+    "bio": "Met in college during freshman year. Love playing basketball and watching sci-fi movies together.",
+    "goal": 14,
+    "next_due_date": "2026-04-20",
+    "preferred": "email",
+    "interactions": [
+      { "id": 1, "type": "Text", "desc": "Asked for career advice", "date": "Jan 28, 2026" },
+      { "id": 2, "type": "Meetup", "desc": "Caught up over lunch", "date": "Feb 10, 2026" }
+    ]
   },
   {
     "id": 2,
     "name": "Sarah Jenkins",
     "picture": "https://randomuser.me/api/portraits/women/2.jpg",
+    "email": "sarah.jenkins@outlook.com",
     "active": 3,
-    "status": "On-Track",
-    "tags": ["Work", "Hobby"]
+    "status": "on-track",
+    "tags": ["Work", "Hobby"],
+    "bio": "Colleague from my first job. We share a passion for photography and weekend hiking trips.",
+    "goal": 7,
+    "next_due_date": "2026-04-18",
+    "preferred": "email",
+    "interactions": [
+      { "id": 1, "type": "Call", "desc": "Discussed new project ideas", "date": "Jan 15, 2026" },
+      { "id": 4, "type": "Video", "desc": "Reviewed portfolio together", "date": "Apr 10, 2026" }
+    ]
   },
   {
     "id": 3,
     "name": "David Chen",
     "picture": "https://randomuser.me/api/portraits/men/3.jpg",
+    "email": "david.chen@yahoo.com",
     "active": 6,
-    "status": "Almost due",
-    "tags": ["Travel", "College"]
+    "status": "almost due",
+    "tags": ["Travel", "College"],
+    "bio": "We traveled across Southeast Asia together after graduation. Best travel buddy I could ask for.",
+    "goal": 7,
+    "next_due_date": "2026-04-16",
+    "preferred": "email",
+    "interactions": [
+      { "id": 1, "type": "Text", "desc": "Shared travel photos", "date": "Jan 5, 2026" },
+      { "id": 4, "type": "Meetup", "desc": "Coffee and old stories", "date": "Apr 8, 2026" }
+    ]
   },
   {
     "id": 4,
     "name": "Elena Rodriguez",
     "picture": "https://randomuser.me/api/portraits/women/4.jpg",
+    "email": "elena.r@gmail.com",
     "active": 25,
-    "status": "Overdue",
-    "tags": ["Home", "Hobby"]
+    "status": "overdue",
+    "tags": ["Home", "Hobby"],
+    "bio": "Neighbor turned best friend. We cook dinner together every Friday and watch old films.",
+    "goal": 14,
+    "next_due_date": "2026-04-22",
+    "preferred": "email",
+    "interactions": [
+      { "id": 1, "type": "Meetup", "desc": "Friday dinner at her place", "date": "Jan 10, 2026" },
+      { "id": 4, "type": "Video", "desc": "Watched a film together online", "date": "Mar 20, 2026" }
+    ]
   },
   {
     "id": 5,
     "name": "Marcus Thorne",
     "picture": "https://randomuser.me/api/portraits/men/5.jpg",
+    "email": "marcus.thorne@proton.me",
     "active": 1,
-    "status": "On-Track",
-    "tags": ["Hobby", "Travel"]
+    "status": "on-track",
+    "tags": ["Hobby", "Travel"],
+    "bio": "Met at a photography workshop. We challenge each other with weekly photo prompts.",
+    "goal": 7,
+    "next_due_date": "2026-04-21",
+    "preferred": "email",
+    "interactions": [
+      { "id": 3, "type": "Call", "desc": "Discussed editing techniques", "date": "Mar 1, 2026" },
+      { "id": 4, "type": "Video", "desc": "Virtual photography critique session", "date": "Apr 13, 2026" }
+    ]
   },
   {
     "id": 6,
     "name": "Aisha Khan",
     "picture": "https://randomuser.me/api/portraits/women/6.jpg",
+    "email": "aisha.khan@gmail.com",
     "active": 10,
-    "status": "Almost due",
-    "tags": ["Travel", "Work"]
+    "status": "almost due",
+    "tags": ["Travel", "Work"],
+    "bio": "Former coworker who moved abroad. We keep in touch over weekly video calls and travel vlogs.",
+    "goal": 10,
+    "next_due_date": "2026-04-17",
+    "preferred": "email",
+    "interactions": [
+      { "id": 1, "type": "Video", "desc": "Weekly catch-up call", "date": "Jan 12, 2026" },
+      { "id": 3, "type": "Call", "desc": "Career advice chat", "date": "Mar 10, 2026" }
+    ]
   },
   {
     "id": 7,
     "name": "Sam Wilson",
     "picture": "https://randomuser.me/api/portraits/men/7.jpg",
+    "email": "sam.wilson@icloud.com",
     "active": 45,
-    "status": "Overdue",
-    "tags": ["Home", "Travel"]
+    "status": "overdue",
+    "tags": ["Home", "Travel"],
+    "bio": "Childhood friend who moved to another city. We used to build LEGO sets as kids.",
+    "goal": 30,
+    "next_due_date": "2026-04-25",
+    "preferred": "email",
+    "interactions": [
+      { "id": 1, "type": "Call", "desc": "Caught up after the holidays", "date": "Jan 3, 2026" },
+      { "id": 3, "type": "Video", "desc": "Virtual LEGO building night", "date": "Mar 7, 2026" }
+    ]
   },
   {
     "id": 8,
     "name": "Isabella Valli",
     "picture": "https://randomuser.me/api/portraits/women/8.jpg",
+    "email": "isabella.valli@gmail.com",
     "active": 2,
-    "status": "On-Track",
-    "tags": ["Hobby", "College"]
+    "status": "on-track",
+    "tags": ["Hobby", "College"],
+    "bio": "Classmate from art school. We still visit galleries together and critique each other's paintings.",
+    "goal": 7,
+    "next_due_date": "2026-04-19",
+    "preferred": "email",
+    "interactions": [
+      { "id": 1, "type": "Meetup", "desc": "Gallery visit downtown", "date": "Jan 25, 2026" },
+      { "id": 2, "type": "Text", "desc": "Shared a new art piece", "date": "Feb 12, 2026" }
+    ]
   },
   {
     "id": 9,
     "name": "Liam Murphy",
     "picture": "https://randomuser.me/api/portraits/men/9.jpg",
+    "email": "liam.murphy@outlook.com",
     "active": 14,
-    "status": "Almost due",
-    "tags": ["College", "Hobby"]
+    "status": "almost due",
+    "tags": ["College", "Hobby"],
+    "bio": "Dorm roommate in college. Bonded over late-night coding sessions and terrible instant noodles.",
+    "goal": 14,
+    "next_due_date": "2026-04-18",
+    "preferred": "email",
+    "interactions": [
+      { "id": 3, "type": "Call", "desc": "Caught up about career moves", "date": "Mar 18, 2026" },
+      { "id": 4, "type": "Meetup", "desc": "Hackathon together", "date": "Mar 30, 2026" }
+    ]
   },
   {
     "id": 10,
     "name": "Chloe Dupont",
     "picture": "https://randomuser.me/api/portraits/women/10.jpg",
+    "email": "chloe.dupont@gmail.com",
     "active": 8,
-    "status": "On-Track",
-    "tags": ["Work", "Home"]
+    "status": "on-track",
+    "tags": ["Work", "Home"],
+    "bio": "Met at a startup event. We mentor each other and catch up over coffee every other week.",
+    "goal": 10,
+    "next_due_date": "2026-04-20",
+    "preferred": "email",
+    "interactions": [
+      { "id": 1, "type": "Meetup", "desc": "Coffee and startup talk", "date": "Jan 16, 2026" },
+      { "id": 2, "type": "Call", "desc": "Mentorship check-in", "date": "Feb 26, 2026" }
+    ]
   },
   {
     "id": 11,
     "name": "Oliver Twist",
     "picture": "https://randomuser.me/api/portraits/men/11.jpg",
+    "email": "oliver.twist@yahoo.com",
     "active": 20,
-    "status": "Overdue",
-    "tags": ["Home", "Hobby"]
+    "status": "overdue",
+    "tags": ["Home", "Hobby"],
+    "bio": "Gym buddy turned close friend. We motivate each other to stay consistent and healthy.",
+    "goal": 14,
+    "next_due_date": "2026-04-23",
+    "preferred": "email",
+    "interactions": [
+      { "id": 1, "type": "Meetup", "desc": "Morning gym session", "date": "Jan 22, 2026" },
+      { "id": 3, "type": "Call", "desc": "Motivation check-in", "date": "Mar 8, 2026" }
+    ]
   },
   {
     "id": 12,
     "name": "Sophia Moretti",
     "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+    "email": "sophia.moretti@gmail.com",
     "active": 5,
-    "status": "On-Track",
-    "tags": ["Travel", "Home"]
+    "status": "on-track",
+    "tags": ["Travel", "Home"],
+    "bio": "Met while volunteering abroad. We share a love of street food and spontaneous road trips.",
+    "goal": 7,
+    "next_due_date": "2026-04-18",
+    "preferred": "email",
+    "interactions": [
+      { "id": 1, "type": "Meetup", "desc": "Road trip to the coast", "date": "Jan 30, 2026" },
+      { "id": 3, "type": "Call", "desc": "Planned the next trip", "date": "Mar 13, 2026" }
+    ]
   },
   {
     "id": 13,
     "name": "James Bond",
     "picture": "https://randomuser.me/api/portraits/men/13.jpg",
+    "email": "james.bond@proton.me",
     "active": 18,
-    "status": "Almost due",
-    "tags": ["Work", "Travel"]
+    "status": "almost due",
+    "tags": ["Work", "Travel"],
+    "bio": "Professional contact who became a genuine friend. We swap book recommendations monthly.",
+    "goal": 20,
+    "next_due_date": "2026-04-21",
+    "preferred": "email",
+    "interactions": [
+      { "id": 1, "type": "Text", "desc": "Shared a book recommendation", "date": "Jan 18, 2026" },
+      { "id": 3, "type": "Meetup", "desc": "Business lunch", "date": "Mar 3, 2026" }
+    ]
   },
   {
     "id": 14,
     "name": "Mia Wong",
     "picture": "https://randomuser.me/api/portraits/women/14.jpg",
+    "email": "mia.wong@gmail.com",
     "active": 4,
-    "status": "On-Track",
-    "tags": ["College", "Work"]
+    "status": "on-track",
+    "tags": ["College", "Work"],
+    "bio": "Study group partner who helped me survive finals week. Now we celebrate every career milestone.",
+    "goal": 7,
+    "next_due_date": "2026-04-19",
+    "preferred": "email",
+    "interactions": [
+      { "id": 1, "type": "Meetup", "desc": "Celebrated her promotion", "date": "Jan 28, 2026" },
+      { "id": 3, "type": "Video", "desc": "Study session for certification", "date": "Mar 11, 2026" }
+    ]
   },
   {
     "id": 15,
     "name": "Noah Miller",
     "picture": "https://randomuser.me/api/portraits/men/15.jpg",
+    "email": "noah.miller@icloud.com",
     "active": 35,
-    "status": "Overdue",
-    "tags": ["Home", "Hobby"]
+    "status": "overdue",
+    "tags": ["Home", "Hobby"],
+    "bio": "Old friend from the neighborhood. We grew up playing video games and still do online.",
+    "goal": 21,
+    "next_due_date": "2026-04-28",
+    "preferred": "email",
+    "interactions": [
+      { "id": 1, "type": "Video", "desc": "Online gaming session", "date": "Jan 6, 2026" },
+      { "id": 3, "type": "Call", "desc": "Caught up about life", "date": "Feb 25, 2026" }
+    ]
   },
   {
     "id": 16,
     "name": "Amelia Harper",
     "picture": "https://randomuser.me/api/portraits/women/16.jpg",
+    "email": "amelia.harper@outlook.com",
     "active": 1,
-    "status": "On-Track",
-    "tags": ["Travel", "Hobby"]
+    "status": "on-track",
+    "tags": ["Travel", "Hobby"],
+    "bio": "Travel blogger I met at a hostel in Lisbon. We trade travel tips and dream of a world tour.",
+    "goal": 7,
+    "next_due_date": "2026-04-21",
+    "preferred": "email",
+    "interactions": [
+      { "id": 1, "type": "Text", "desc": "Shared a travel tip about Lisbon", "date": "Jan 14, 2026" },
+      { "id": 4, "type": "Meetup", "desc": "Travel meetup event", "date": "Apr 13, 2026" } 
+    ]
   }
 ]

@@ -1,27 +1,30 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 @plugin "daisyui";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-poppins: var(--font-poppins);
-  --font-dm-mono: var(--font-dm-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: var(--font-poppins), var(--font-dm-mono), sans-serif;
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+
+  }
+  html {
+    @apply font-sans;
+  }
 }

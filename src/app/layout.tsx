@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins, DM_Mono } from "next/font/google";
+import { Poppins, DM_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -17,7 +19,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KeenKeeper — Keep Your Friendships Alive",
+  title: "F-Closer",
   description: "Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.",
 };
 
@@ -27,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${dmMono.variable} h-full antialiased`}>
+    <html lang="en" className={`h-full antialiased ${poppins.variable} ${dmMono.variable} font-sans ${inter.variable}`}>
       <body className="min-h-full flex flex-col bg-stone-950 text-white">
         <Navbar />
         <main className="flex-1">
