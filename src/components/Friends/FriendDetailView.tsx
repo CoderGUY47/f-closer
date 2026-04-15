@@ -1,33 +1,37 @@
+"use client";
 import React, { useState, useEffect } from "react";
-import { Bell, Archive, Trash2, History } from "lucide-react";
+import { Bell, Archive, Trash2 } from "lucide-react";
 import Image from "next/image";
+import { getAllInteractionsFromLocalDB } from "@/utils/localDB";
+import HistoryItem, { iconMap } from "./HistoryItem";
+import InteractionModal from "./InteractionModal";
 
 const FriendDetailView = ({ friend }: { friend: any }) => {
-  const { name, picture, status, tags = [], bio, active, goal, interactions = [], } = friend || {};
+  const { name, picture, status, tags = [], bio, active, goal } = friend || {};
   const [realDateTime, setRealDateTime] = useState<string>("");
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [selectedAction, setSelectedAction] = useState<string>("");
+  const [myHistory, setMyHistory] = useState<any[]>([]);
+  const [showAll, setShowAll] = useState<boolean>(false);
 
   useEffect(() => {
+    //get current date and format
     const today = new Date();
     const formattedDate = `${today.getDate()} ${today.toLocaleString("en-US", { month: "long" })}, ${today.getFullYear()}`;
     setRealDateTime(formattedDate);
-  }, []);
 
-  const iconMap: any = {
-    Call: "/assets/telephone.gif",
-    Text: "/assets/conversation.gif",
-    Video: "/assets/video.gif",
-    Meetup: "/assets/handshake.gif",
-  };
+    //load this friend's interactions from localStorage
+    //getAllInteractions() returns all of the interactions,
+    //then filter out that frnd interaction
 
-  const getIcon = (type: string) => {
-    const src = iconMap[type];
-    if (src) {
-      return (
-        <Image src={src} alt={type} width={64} height={64} className="w-full h-full object-cover rounded-full"/>
-      );
-    }
-    return null;
-  };
+    const allSaved = getAllInteractionsFromLocalDB();
+    const thisFreindsHistory = allSaved.filter(
+      (interactionRecord: any) => interactionRecord.friendId === friend?.id
+    ); 
+    //use friend?.id instead of friend.id to avoid null error and 
+    //use (:any) for get rid of typescript's syntax error
+    setMyHistory(thisFreindsHistory);
+  }, [friend?.id]);
 
   const statusColors: any = {
     overdue: "bg-red-500",
@@ -42,24 +46,17 @@ const FriendDetailView = ({ friend }: { friend: any }) => {
           <div className="bg-stone-500/10 border-0 rounded-2xl p-8 flex flex-col items-center text-center shadow-sm">
             <div className="relative mb-6">
               <Image src={picture} alt={name} width={128} height={128} className="rounded-full object-cover ring-4 ring-gray-50 shadow-md"/>
-              <div
-                className={`absolute bottom-2 right-2 w-5 h-5 rounded-full border-4 border-white ${statusColors[status] || "bg-gray-300"}`}
-              />
+              <div className={`absolute bottom-2 right-2 w-5 h-5 rounded-full border-4 border-white ${statusColors[status] || "bg-gray-300"}`}/>
             </div>
 
             <h2 className="text-2xl font-bold text-white">{name}</h2>
             <div className="mt-4 flex flex-col items-center gap-2">
-              <span
-                className={`px-4 py-1 text-white text-[11px] font-bold rounded-full uppercase tracking-widest ${statusColors[status] || "bg-gray-300"}`}
-              >
+              <span className={`px-4 py-1 text-white text-[11px] font-bold rounded-full uppercase tracking-widest ${statusColors[status] || "bg-gray-300"}`}>
                 {status}
               </span>
               <div className="flex flex-wrap gap-2 justify-center mt-2">
                 {tags.map((tag: string) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded-full uppercase tracking-wider"
-                  >
+                  <span key={tag} className="px-3 py-1 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded-full uppercase tracking-wider">
                     {tag}
                   </span>
                 ))}
@@ -132,12 +129,14 @@ const FriendDetailView = ({ friend }: { friend: any }) => {
                 { type: "Text", label: "Text" },
                 { type: "Video", label: "Video" },
               ].map((item) => (
-                <button
-                  key={item.type}
-                  className="flex flex-col items-center justify-center gap-4 p-4 border-0 bg-white/5 rounded-2xl"
+                <button key={item.type} onClick={() => {setSelectedAction(item.type); setShowModal(true);}}
+                  className="flex flex-col items-center justify-center gap-4 p-4 border-0 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors"
                 >
                   <div className="w-16 h-16 flex items-center justify-center bg-stone-500/10 rounded-full shadow-sm border border-gray-50 overflow-hidden">
-                    {getIcon(item.type)}
+                    {iconMap[item.type] && (
+                      <Image src={iconMap[item.type]} alt={item.type} width={64} height={64} 
+                      className="w-full h-full object-cover rounded-full"/>
+                    )}
                   </div>
                   <span className="text-sm font-semibold text-white/50">
                     {item.label}
@@ -154,44 +153,51 @@ const FriendDetailView = ({ friend }: { friend: any }) => {
                 Recent History
               </h3>
               <button className="flex items-center gap-2 px-4 py-2 bg-violet-600 rounded-full text-xs font-bold text-white hover:bg-violet-700 transition-colors">
-                <History className="w-5 h-5" /> Full History
+                Full History
               </button>
             </div>
 
             <div className="space-y-4">
-              {interactions.length > 0 ? (
-                interactions.map((interaction: any, i: number) => (
-                  <div
-                    key={i}
-                    className="py-4 px-6 flex justify-between items-center border-0 rounded-full hover:opacity-70 duration-500 transition-colors group"
-                  >
-                    <div className="flex gap-5 items-center">
-                      <div className="w-14 h-14 bg-white border border-slate-100 rounded-2xl flex items-center justify-center shadow-sm group-hover:border-indigo-100 transition-colors overflow-hidden">
-                        {getIcon(interaction.type)}
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-white text-base">
-                          {interaction.type}
-                        </h4>
-                        <p className="text-xs text-white/50 mt-0.5">
-                          {interaction.desc}
-                        </p>
-                      </div>
-                    </div>
-                    <span className="text-xs font-normal text-white/50">
-                      {interaction.date}
-                    </span>
-                  </div>
-                ))
+              {myHistory.length > 0 ? (
+                <>
+                  {(showAll ? myHistory : myHistory.slice(0, 3)).map((interaction: any, i: number) => (
+                    <HistoryItem 
+                      key={i} 
+                      type={interaction.type} 
+                      date={interaction.date} 
+                    />
+                  ))}
+
+                  {myHistory.length > 3 && (
+                    <button
+                      onClick={() => setShowAll(!showAll)}
+                      className="w-full py-3 mt-2 rounded-2xl text-xs font-bold uppercase tracking-widest text-violet-400 bg-white/5 hover:bg-white/10 border border-white/5 hover:border-violet-500/30 transition-all"
+                    >
+                      {showAll ? "Show Less ↑" : `Show ${myHistory.length - 3} More ↓`}
+                    </button>
+                  )}
+                </>
               ) : (
-                <p className="text-center py-10 text-slate-400 italic text-sm">
-                  No recent interactions found.
-                </p>
+                <div className="text-center py-10">
+                  <p className="text-white/30 italic text-sm">No interactions logged yet.</p>
+                  <p className="text-white/20 text-xs mt-1">Use the Quick Check-In buttons above to log one!</p>
+                </div>
               )}
             </div>
           </section>
         </main>
       </div>
+
+      <InteractionModal
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+        selectedAction={selectedAction}
+        friend={friend}
+        onConfirm={(newInteraction: any) => {
+          setMyHistory((prev) => [newInteraction, ...prev]);
+        }}
+      />
+
     </div>
   );
 };

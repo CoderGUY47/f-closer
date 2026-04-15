@@ -2,12 +2,15 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import FriendCard from "./FriendCard";
+import { getAllInteractionsFromLocalDB } from "@/utils/localDB";
 
 const FriendsList: React.FC = () => {
   const [friends, setFriends] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [totalInteractions, setTotalInteractions] = useState(0);
 
   useEffect(() => {
+    // 1.fetch friends data from JSON
     fetch("/data/friendsInfo.json")
       .then((res) => res.json())
       .then((data) => {
@@ -18,14 +21,17 @@ const FriendsList: React.FC = () => {
         console.error("Failed to load friends:", error);
         setLoading(false);
       });
-  }, []);
 
+    // 2. get the number of real interactions logged in localStorage
+    const saved = getAllInteractionsFromLocalDB();
+    setTotalInteractions(saved.length);
+  }, []); 
 
   const stats = {
     total: friends.length,
     onTrack: friends.filter(f => f.status?.toLowerCase() === 'on-track').length,
     attention: friends.filter(f => f.status?.toLowerCase() === 'overdue').length,
-    interactions: 24
+    interactions: totalInteractions //show the count here
   };
 
   if (loading) {

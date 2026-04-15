@@ -14,7 +14,7 @@ export default function FriendDetailPage() {
       .then((allFriends) => {
         //search through the list to find the right friend
         const result = allFriends.find((eachFriend: any) => {
-          //checking friend's id == route ID, then return them
+          //checking friend's id == route id, then return them
           return eachFriend.id == RoutingData.id;
         });
         setTimeout(() => {
@@ -25,7 +25,7 @@ export default function FriendDetailPage() {
 
   if (!friend) {
     return (
-      <div className="min-h-[70vh] flex justify-center items-center gap-7">
+      <div className="min-h-[70vh] flex justify-center items-center gap-4">
         <span className="loading loading-dots loading-xl"></span>
         <span className="loading loading-dots loading-xl"></span>
         <span className="loading loading-dots loading-xl"></span>

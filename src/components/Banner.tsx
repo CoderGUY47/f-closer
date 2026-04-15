@@ -9,18 +9,18 @@ const Banner = () => {
         <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent z-10" />
         <div className="absolute inset-0 w-full z-20 flex flex-col justify-center items-center text-center">
           <div className="bg-black/20 backdrop-blur-md p-6 md:p-12 rounded-4xl border border-white/10 w-full h-full flex flex-col justify-center">
-            <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-6xl font-semibold text-white mb-3 tracking-tight leading-tight">
               Bring Your <br />
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-orange-400 to-amber-500">
+              <span className="bg-clip-text text-transparent font-extrabold bg-linear-to-r from-red-600 to-amber-600">
                 Circle Closer
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-white/80 font-medium mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-white/80 w-2xl mx-auto font-medium mb-6 leading-relaxed">
               Your personal workspace for tracking meaningful moments and nurturing 
               the relationships that define your life.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <button className="btn btn-lg bg-orange-600 hover:bg-orange-500 border-none text-white px-10 rounded-2xl shadow-xl transition-all hover:scale-105">
+              <button className="btn btn-lg bg-purple-600 hover:bg-purple-500 border-none text-white px-10 rounded-2xl shadow-xl transition-all hover:scale-105">
                 Add New Friend
               </button>
               <button className="btn btn-lg btn-outline text-white border-white/20 hover:bg-white/10 px-10 rounded-2xl transition-all">
