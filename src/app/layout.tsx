@@ -33,8 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full antialiased ${poppins.variable} ${dmMono.variable} font-sans ${inter.variable}`}
-      suppressHydrationWarning
+      className={`h-full ${poppins.variable} ${dmMono.variable} font-sans ${inter.variable}`}
     >
       <body className="min-h-full flex flex-col bg-stone-950 text-white">
         <Providers>

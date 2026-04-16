@@ -11,6 +11,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
     </>
   );
 }
-
+ 
 
 //use Providers in layout.tsx but while rendering it will show hydration error, becasue of nextjs server side rendering

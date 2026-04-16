@@ -13,7 +13,13 @@ const Footer = () => {
           <aside>
             <div className="font-bold text-lg text-white">
               <div className="bg-black/50 p-4 rounded-3xl border-0 flex items-center gap-2">
-                <Image src="/assets/logo.gif" alt="Icon" width={70} height={50} className="rounded-2xl"/>
+                <Image
+                  src="/assets/logo.gif"
+                  alt="Icon"
+                  width={70}
+                  height={50}
+                  className="rounded-2xl"
+                />
               </div>
             </div>
             <p className="text-center text-white/70 text-lg mt-6 mb-7 max-w-2xl font-medium">
@@ -54,7 +60,7 @@ const Footer = () => {
               <div className="bg-white p-3 rounded-xl border-0 flex items-center gap-2 px-3 py-3">
                 <span className="font-black bg-clip-text text-transparent bg-linear-to-r from-purple-600 via-violet-600 to-indigo-600 text-base">
                   F-Closer
-                </span> 
+                </span>
               </div>
             </div>
           </div>

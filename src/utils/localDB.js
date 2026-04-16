@@ -1,6 +1,6 @@
 //লোকাল স্টোরেজ থেকে সব হিস্ট্রি নিয়ে আসার ফাংশন
 const getAllInteractionsFromLocalDB = () => {
-  if (typeof window === "undefined") return [];
+  //if (typeof window === "undefined") return [];
   const allInteractions = localStorage.getItem("f-closer-history");
   if (allInteractions) {
     return JSON.parse(allInteractions);

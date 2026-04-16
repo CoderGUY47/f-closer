@@ -4,7 +4,7 @@ import Image from "next/image";
 
 // interaction এর ধরন অনুযায়ী আইকন পাথ (এটি আমরা অন্য ফাইল থেকেও ব্যবহার করতে পারব)
 // ১. কোন কাজের জন্য কোন আইকন ব্যবহার হবে তার একটি তালিকা (Icon List)
-export const iconMap: any = { 
+export const iconMap: any = {
   Call: "/assets/telephone.gif",
   Text: "/assets/conversation.gif",
   Video: "/assets/video.gif",
@@ -27,7 +27,13 @@ const HistoryItem = ({ type, date }: HistoryItemProps) => {
       <div className="flex gap-5 items-center">
         <div className="w-14 h-14 bg-white border border-slate-100 rounded-2xl flex items-center justify-center shadow-sm group-hover:border-indigo-100 transition-colors overflow-hidden">
           {iconPath && (
-            <Image src={iconPath} alt={type} width={64} height={64} className="w-full h-full object-cover rounded-full"/>
+            <Image
+              src={iconPath}
+              alt={type}
+              width={64}
+              height={64}
+              className="w-full h-full object-cover rounded-full"
+            />
           )}
         </div>
         <div>
