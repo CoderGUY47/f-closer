@@ -16,9 +16,11 @@
 ---
 
 ## 🌌 The Vision
+
 In an era of digital noise, we often lose track of the people who truly matter. **F-Closer** is not just a tracker; it's a personal shelf for your meaningful connections. It is a curated workspace designed to help you browse, tend, and nurture the relationships that define your life.
 
 ## 🧠 Why F-Closer? (The Problem It Solves)
+
 **The Problem:** Life gets busy. We rely on "seeing updates" on social media instead of actually reaching out. Over time, high-value friendships fade into digital ghosts.
 
 **The Solution:** F-Closer introduces **Relationship Intentionality**. By setting a "Connection Goal" for each friend, the app monitors the pulse of your circle. It visually alerts you when a bond needs attention, ensuring that no meaningful connection is ever left behind.
@@ -28,20 +30,25 @@ In an era of digital noise, we often lose track of the people who truly matter. 
 ## ✨ The Experience
 
 ### 1. The Circle (Home)
+
 A cinematic dashboard of your inner circle. Each card is a portal into a specific relationship, showing you at a glance who is "On Track" and who "Needs Attention."
 
 ### 2. Deep Connection (Friend Details)
+
 Dive into a shared history. Set custom connection cadences (e.g., "I want to talk to Zoro every 7 days") and use the **Quick Check-In** system to log moments in real-time.
 
 ### 3. The Living History (Timeline)
+
 Every call, every text, every meetup is a brick in the foundation of a friendship. The Timeline provides a chronological tapestry of your social investment, filtered to your needs.
 
 ### 4. Friendship Analytics (Stats)
+
 Data meets emotion. Visualize your connection habits with sophisticated charts. See how you prefer to reach out and where you spend your most valuable asset: **time.**
 
 ---
 
 ## 🛠️ Performance Architecture
+
 Built with the world's most sophisticated web technologies for a seamless, glassmorphism-inspired UI.
 
 - **Engine:** [Next.js 15+](https://nextjs.org/) (App Router & Turbopack)

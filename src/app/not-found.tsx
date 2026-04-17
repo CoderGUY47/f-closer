@@ -9,13 +9,13 @@ export default function NotFound() {
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-violet-600/20 rounded-full blur-[120px] animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-[160px] animate-pulse delay-700" />
       <div className="relative z-10 text-center flex flex-col items-center">
-        <h1 className="text-9xl md:text-[12rem] font-black text-white/[0.03] tracking-tighter absolute -top-24 md:-top-40 select-none pointer-events-none">
+        <h1 className="text-9xl md:text-[12rem] font-black text-white tracking-tighter absolute -top-24 md:-top-40 select-none pointer-events-none">
           404
         </h1>
         <div className="space-y-8">
           <div className="space-y-3">
              <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
-              Lost in <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 to-indigo-500">Space?</span>
+              Lost in <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-600 to-indigo-500">Space?</span>
             </h2>
             <p className="text-lg md:text-xl text-white/40 font-medium max-w-md mx-auto">
               The page you&apos;re looking for has vanished into another dimension. Let&apos;s get you back to your circle.
