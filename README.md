@@ -22,6 +22,7 @@
 
 - [✨ Overview](#-overview)
 - [❌ The Problem & ✅ The Solution](#-the-problem---the-solution)
+- [🚀 Live Link](#-live-link)
 - [💡 Business Value & Engagement](#-business-value--engagement)
 - [🚀 Key Features](#-key-features)
 - [📦 Tech Stack & Architecture](#-tech-stack--architecture)
@@ -53,6 +54,29 @@ Most people rely on social media algorithms to remind them of friends' birthdays
 | No insight into whether your social life is expanding | **Recharts trend charts** showing friendship activity over weeks and months |
 | Stiff, static interfaces that feel clinical | **Motion-powered entrances** giving every card and stat a cinematic reveal |
 | Bulky notification systems that overwhelm users | Lightweight **react-hot-toast** inline feedback for every action |
+
+---
+
+## 🚀 Live Link
+
+→ [View F-Closer Live Demo](https://f-closer.vercel.app/)
+
+<br/>
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=880&h=495&auto=format&fit=crop" alt="F-Closer Dashboard" width="100%" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover" />
+    </td>
+    <td width="50%">
+      <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=880&h=495&auto=format&fit=crop" alt="F-Closer Analytics" width="100%" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><sub>👥 Friend Circle Management Dashboard</sub></td>
+    <td align="center"><sub>📊 Friendship Analytics & Interaction Trends</sub></td>
+  </tr>
+</table>
 
 ---
 

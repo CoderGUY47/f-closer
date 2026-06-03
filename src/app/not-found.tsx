@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { Home, MoveLeft } from "lucide-react";
 
@@ -27,7 +26,8 @@ export default function NotFound() {
               <Home size={22} className="group-hover:-translate-y-0.5 transition-transform" />
               Go Back Home
             </Link>
-            <button onClick={() => typeof window !== 'undefined' && window.history.back()} className="group flex items-center gap-3 px-10 py-5 bg-white/5 text-white/70 font-bold rounded-2xl border border-white/10 hover:bg-white/10 transition-all hover:border-white/20 hover:text-white">
+            <button onClick={() => typeof window !== 'undefined' && window.history.back()} 
+              className="group flex items-center gap-3 px-10 py-5 bg-white/5 text-white/70 font-bold rounded-2xl border border-white/10 hover:bg-white/10 transition-all hover:border-white/20 hover:text-white">
               <MoveLeft size={22} className="group-hover:-translate-x-1 transition-transform" />
               Previous Page
             </button>
